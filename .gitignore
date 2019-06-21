@@ -1,0 +1,9 @@
+*.pyc
+*.vscode
+*.log
+__pycache__
+env_bot
+images
+base_telegram_bot
+test_bot_model.py
+my_token_proxy.py
