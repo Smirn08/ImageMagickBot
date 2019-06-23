@@ -10,18 +10,6 @@ from PIL import Image
 from torchvision import transforms
 
 
-# _loader = transforms.Compose([
-#     transforms.ToTensor()
-# ])
-
-
-# def transformer(img):
-#     return _loader(img).unsqueeze(0)
-
-
-# def to_image(output):
-#     return misc.toimage(output[0])
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 imsize = 512
 

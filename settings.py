@@ -1,13 +1,22 @@
 from telegram import InlineKeyboardButton
 
-FIRST_KEYS = [
+START_KEY = [
     [
-        InlineKeyboardButton('Ну погнали!', callback_data='pic_menu')
+        InlineKeyboardButton('Выбрать стиль', callback_data='menu')
     ]
 ]
 
-# REQUEST_KEYS = [
-#     [
-#         InlineKeyboardButton('Ну погнали!', callback_data='pic_menu')
-#     ]
-# ]
+ACTION_KEYS = [
+    [
+        InlineKeyboardButton('Candy', callback_data='candy'),
+        InlineKeyboardButton('Mosaic', callback_data='mosaic'),
+        InlineKeyboardButton('Udnie', callback_data='udnie')
+    ],
+    [
+        InlineKeyboardButton('Rain princess', callback_data='princess'),
+        InlineKeyboardButton('Свой стиль', callback_data='self')
+    ]
+]
+
+MODE = None
+STATUS = None

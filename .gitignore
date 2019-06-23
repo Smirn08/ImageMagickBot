@@ -2,8 +2,9 @@
 *.vscode
 *.log
 __pycache__
-env_bot
+env
 images
+fast_neural_style
 base_telegram_bot
 test_bot_model.py
 my_token_proxy.py
