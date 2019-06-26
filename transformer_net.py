@@ -38,6 +38,7 @@ class TransformerNet(torch.nn.Module):
         y = self.relu(self.in4(self.deconv1(y)))
         y = self.relu(self.in5(self.deconv2(y)))
         y = self.deconv3(y)
+        
         return y
 
 
@@ -51,6 +52,7 @@ class ConvLayer(torch.nn.Module):
     def forward(self, x):
         out = self.reflection_pad(x)
         out = self.conv2d(out)
+
         return out
 
 
@@ -73,6 +75,7 @@ class ResidualBlock(torch.nn.Module):
         out = self.relu(self.in1(self.conv1(x)))
         out = self.in2(self.conv2(out))
         out = out + residual
+
         return out
 
 
@@ -96,4 +99,5 @@ class UpsampleConvLayer(torch.nn.Module):
             x_in = torch.nn.functional.interpolate(x_in, mode='nearest', scale_factor=self.upsample)
         out = self.reflection_pad(x_in)
         out = self.conv2d(out)
+
         return out

@@ -29,7 +29,6 @@ def stylize(img_stream, style_type):
     ])
     content_image = content_transform(content_image)
     content_image = content_image.unsqueeze(0).to(device)
-    print(f'stylize_content:{content_image}')
 
     with torch.no_grad():
         style_model = TransformerNet()
